@@ -28,3 +28,5 @@ print(myp)
 print(type(myp))
 print(type(Portfolio))
 
+for (ticker, shares) in myp.items():
+    print (ticker, shares)
