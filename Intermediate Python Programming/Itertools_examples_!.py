@@ -55,13 +55,16 @@ print(list(acc2))
 acc3 = itertools.accumulate(a, func=max)
 a.insert(2, 5)
 print(list(acc3))
+
+acc4 = itertools.accumulate(a, lambda x, y: x + y ** 2)
+print(list(acc4))
 print("\n")
 
 print(('Groupby from itertools module'))
 
 
 def smaller_then_3(x):
-    return x < 3
+    return x > 3
 
 
 group_obj = itertools.groupby(a, key=smaller_then_3)
@@ -89,7 +92,14 @@ print('\nCycle')
 c = [1, 2, 3, 4, 5, 6]
 rotatec = itertools.cycle(c)
 print(type(rotatec))
-print(list(rotatec))
+sequence_reptition = 0
+sequence_start = 0
+sequence_end = len(c) - 1
+print(sequence_end)
+
+for num in c:
+    if sequence_start == 0:
+        print("Sequence %d" % (sequence_reptition + 1))
 
 print('\nRepeat')
 for i in itertools.repeat(3, 5):

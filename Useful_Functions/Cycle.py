@@ -11,6 +11,7 @@ StringBuffer = itertools.cycle(Inputstring)
 SequenceRepeation = 0
 SequenceStart = 0
 SequenceEnd = len(Inputstring)
+print(len(Inputstring))
 
 for output in StringBuffer:
     if (SequenceStart == 0):
@@ -26,6 +27,7 @@ for output in StringBuffer:
     if (SequenceStart == SequenceEnd - 1):
 
         if (SequenceRepeation >= 2):
+            print('\n')
             break
         else:
             SequenceRepeation += 1
@@ -33,3 +35,18 @@ for output in StringBuffer:
             print("\n")
     else:
         SequenceStart += 1
+
+num = itertools.cycle(range(1, 3))
+print(next(num), end=" ")
+print(next(num), end="\n")
+print(next(num), end="\n")
+print(next(num), end=" ")
+print(next(num), end='\n')
+
+print("Dividing a group using cycle")
+students = ['tom', 'john', 'shomari', 'zoleel', 'zuke', 'chris']
+
+team = [(next(num), student) for student in students]
+print(team)
+for i in team:
+    print(i)
