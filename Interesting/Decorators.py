@@ -6,7 +6,9 @@ class Employee:
         self.last = last
         # 1 self.email = first + '.' + last + '@email.com'
 
-    @property  ### by using @property decorator we can change an
+    @property
+    ### by using @property decorator we are defining the function as a method but accessing it like an attribute
+    # meaning we don't have to use this () ate the end of the method call.
     def email(self):  ##2
         return '{}.{}@email.com'.format(self.first, self.last)
 
