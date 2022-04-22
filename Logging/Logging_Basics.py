@@ -1,4 +1,5 @@
 import logging
+import HelperLog
 
 # Configuring the logging module
 logging.basicConfig(level=logging.DEBUG,
@@ -17,7 +18,5 @@ logging.basicConfig(level=logging.DEBUG,
 
 # using %s as placeholders
 logging.warning('%s before you %s', 'Look', 'leap!')
-
-import HelperLog
 
 HelperLog.logger.warning('This is a warning for my Helper Log')
